@@ -1,0 +1,87 @@
+/* Main Container */
+.header {
+  background: black;
+  height: 60px;
+  position: sticky;
+  color: white;
+  border: 1px solid red;
+  z-index: 100;
+}
+
+/* Shared Properties */
+.header,
+.header__search,
+.header__nav,
+.header__optionBasket {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo,
+.header__searchIcon,
+.header__option {
+  cursor: pointer;
+}
+
+/* The amazon logo properties */
+.header__logo {
+  object-fit: contain;
+  width: 100px;
+  margin: 0 20px;
+  margin-top: 10px;
+}
+
+/* Search Container and the two items inside */
+.header__search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  height: 100%;
+}
+
+.header__searchInput {
+  outline: none;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 5px 0 0 5px;
+  font-size: 20px;
+}
+
+.header__searchIcon {
+  height: 45px !important;
+  background-color: #febd69;
+  border-radius: 0 5px 5px 0;
+  color: black;
+  padding: 5px;
+  width: 40px !important;
+}
+
+/* The Nav Container and the three items inside  */
+.header__nav {
+  justify-content: space-evenly;
+}
+
+/* There are three header options */
+.header__option {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+  border-right: 1px solid white;
+  padding-right: 10px;
+}
+
+.header__lineOne {
+  font-size: 10px;
+}
+
+.header__lineTwo {
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.header__basketCount {
+    margin: 0 10px;
+    font-size: 25px;
+    font-weight: 800;
+}
