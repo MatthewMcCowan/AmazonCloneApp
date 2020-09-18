@@ -1,8 +1,25 @@
 import React from "react";
+import { useStateValue } from "../ContextAPI/StateProvider";
 import "./CSS/product.css";
 
 // Props are introduced after inital html and css are complete
 function Product({ id, title, price, rating, image }) {
+
+  const [{basket}, dispatch] = useStateValue();
+
+  const addToBasket = () => {
+    dispatch({
+      type: 'ADD_TO_BASKET',
+      item: {
+        id: id,
+        title: title,
+        image: image,
+        price: price,
+        rating: rating,
+      }
+    })
+  }
+  console.log(basket)
   return (
     <div className="product">
       {/* There are three items inside product */}
@@ -23,7 +40,7 @@ function Product({ id, title, price, rating, image }) {
       </div>
       <img src={image} alt="" className="product__image" />
       {/* Style Later for better button */}
-      <button>Add To Basket</button>
+      <button onClick={addToBasket}>Add To Basket</button>
     </div>
   );
 }
