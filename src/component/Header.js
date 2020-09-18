@@ -10,7 +10,7 @@ function Header() {
             <img className='header__logo' src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt=""/>
 
             <div className="header__search">
-                <input type="text" className="header__searchInput"/>
+                <input type="text" placeholder='Search' className="header__searchInput"/>
                 {/* search icon */} < SearchIcon className='header__searchIcon'/>
             </div>
 
