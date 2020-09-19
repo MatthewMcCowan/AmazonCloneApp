@@ -60,6 +60,7 @@
 /* The Nav Container and the three items inside  */
 .header__nav {
   justify-content: space-evenly;
+ 
 }
 
 /* There are three header options */
@@ -69,6 +70,7 @@
   margin: 0 10px;
   border-right: 1px solid white;
   padding-right: 10px;
+  color: white !important;
 }
 
 .header__lineOne {
