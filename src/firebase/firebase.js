@@ -15,6 +15,7 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 const db = firebaseApp.firestore();
 
+//This is where we connect firebase authenticity with our app and assign it a variable
 const auth = firebase.auth();
 
 export { db, auth};
