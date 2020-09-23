@@ -56,6 +56,10 @@ function Payment() {
         setError(null);
         setProcessing(false);
 
+        dispatch({
+          type: 'EMPTY_BASKET',
+        })
+
         history.replace("/orders");
       });
   };
@@ -120,10 +124,11 @@ function Payment() {
                   thousandSeparator={true}
                   prefix={"$"}
                 />
-                <button disabled={processing || disabled || succeeded}>
+                
+              </div>
+              <button disabled={processing || disabled || succeeded}>
                   <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
                 </button>
-              </div>
               {error && <div>{error}</div>}
             </form>
           </div>

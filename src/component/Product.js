@@ -19,7 +19,7 @@ function Product({ id, title, price, rating, image }) {
       }
     })
   }
-  console.log(basket)
+  //console.log(basket)
   return (
     <div className="product">
       {/* There are three items inside product */}
