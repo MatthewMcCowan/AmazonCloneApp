@@ -34,7 +34,7 @@ function Header() {
       </div>
 
       <div className="header__nav">
-        <Link to={!user && '/login'}>
+        <Link to={!user && "/login"}>
           <div className="header__option" onClick={handleAuthenticaton}>
             <span className="header__lineOne">
               Hello, {!user ? "Guest" : user.email}
@@ -44,11 +44,12 @@ function Header() {
             </span>
           </div>
         </Link>
-
-        <div className="header__option">
-          <span className="header__lineOne">Returns</span>
-          <span className="header__lineTwo">& Orders</span>
-        </div>
+        <Link to="/orders">
+          <div className="header__option">
+            <span className="header__lineOne">Returns</span>
+            <span className="header__lineTwo">& Orders</span>
+          </div>
+        </Link>
         <div className="header__option">
           <span className="header__lineOne">Your</span>
           <span className="header__lineTwo">Prime</span>

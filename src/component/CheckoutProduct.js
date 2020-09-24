@@ -2,15 +2,14 @@ import React from "react";
 import { useStateValue } from "../ContextAPI/StateProvider";
 import "./CSS/checkoutProduct.css";
 
-function CheckoutProduct({ image, id, title, price, rating }) {
-
-    const [state, dispatch] = useStateValue();
-    const removeFromBasket = () => {
-        dispatch({
-            type: 'REMOVE_FROM_BASKET',
-            id: id,
-        })
-    }
+function CheckoutProduct({ image, id, title, price, rating, hideButton }) {
+  const [state, dispatch] = useStateValue();
+  const removeFromBasket = () => {
+    dispatch({
+      type: "REMOVE_FROM_BASKET",
+      id: id,
+    });
+  };
   return (
     <div className="checkoutProduct" id={id}>
       <img src={image} alt="" className="checkoutProduct__image" />
@@ -27,7 +26,9 @@ function CheckoutProduct({ image, id, title, price, rating }) {
               <p>🌟</p>
             ))}
         </div>
-        <button onClick={removeFromBasket}>Remove From Basket</button>
+        {!hideButton && (
+          <button onClick={removeFromBasket}>Remove from Basket</button>
+        )}
       </div>
     </div>
   );
